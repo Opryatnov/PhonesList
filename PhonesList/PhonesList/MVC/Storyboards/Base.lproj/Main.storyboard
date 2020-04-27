@@ -31,14 +31,133 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Wy-63-NLu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhonesTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhonesTableViewCell" rowHeight="94" id="fou-WI-kDw" customClass="PhonesTableViewCell" customModule="Phones_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fou-WI-kDw" id="1Pd-FR-OzE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OL8-Wh-9TM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESw-f1-6IH">
+                                                            <rect key="frame" x="68" y="37.5" width="42" height="19"/>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdY-EU-nSn">
+                                                            <rect key="frame" x="16" y="10" width="42" height="74"/>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="pdY-EU-nSn" firstAttribute="leading" secondItem="OL8-Wh-9TM" secondAttribute="leading" constant="16" id="9so-xK-Hh9"/>
+                                                        <constraint firstItem="pdY-EU-nSn" firstAttribute="top" secondItem="OL8-Wh-9TM" secondAttribute="top" constant="10" id="A4q-zv-cg5"/>
+                                                        <constraint firstItem="ESw-f1-6IH" firstAttribute="width" secondItem="pdY-EU-nSn" secondAttribute="width" id="ITP-08-1LD"/>
+                                                        <constraint firstItem="pdY-EU-nSn" firstAttribute="centerY" secondItem="ESw-f1-6IH" secondAttribute="centerY" id="Vwo-BS-K4O"/>
+                                                        <constraint firstItem="ESw-f1-6IH" firstAttribute="leading" secondItem="pdY-EU-nSn" secondAttribute="trailing" constant="10" id="l2t-oa-Lav"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pdY-EU-nSn" secondAttribute="bottom" constant="10" id="mit-xo-Ghq"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OL8-Wh-9TM" firstAttribute="leading" secondItem="1Pd-FR-OzE" secondAttribute="leading" id="DQx-fJ-vVc"/>
+                                                <constraint firstAttribute="bottom" secondItem="OL8-Wh-9TM" secondAttribute="bottom" id="IMX-Gv-pXH"/>
+                                                <constraint firstAttribute="trailing" secondItem="OL8-Wh-9TM" secondAttribute="trailing" id="X8b-fF-tsf"/>
+                                                <constraint firstItem="OL8-Wh-9TM" firstAttribute="top" secondItem="1Pd-FR-OzE" secondAttribute="top" id="bzZ-VS-W4t"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="phoneModelLabel" destination="ESw-f1-6IH" id="0fU-Ge-Rfy"/>
+                                            <outlet property="phoneNameLabel" destination="pdY-EU-nSn" id="153-Z7-45L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Vpe-xR-Po6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6rE-Ha-Fcx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9Wy-63-NLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2FB-c2-1zr"/>
+                            <constraint firstItem="9Wy-63-NLu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bvk-2L-xWW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Wy-63-NLu" secondAttribute="trailing" id="YGA-1f-oki"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Wy-63-NLu" secondAttribute="bottom" id="wiu-jo-9i4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="EkL-BR-WaW"/>
+                    <connections>
+                        <outlet property="tableView" destination="9Wy-63-NLu" id="b3Q-0c-Oi5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-926" y="-206"/>
+            <point key="canvasLocation" x="-926.08695652173924" y="-206.25"/>
+        </scene>
+        <!--Phone Details View Controller-->
+        <scene sceneID="NbG-XD-EKf">
+            <objects>
+                <viewController storyboardIdentifier="PhoneDetailsViewController" id="Y6g-xt-eJl" customClass="PhoneDetailsViewController" customModule="Phones_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01W-oG-vGY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-al-Lq9">
+                                <rect key="frame" x="16" y="118" width="382" height="744"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kE-gM-wZe">
+                                <rect key="frame" x="16" y="60" width="382" height="48"/>
+                                <color key="backgroundColor" red="0.7725490196" green="0.60392156860000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="YLw-st-9cm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editPhoneDetails:" destination="Y6g-xt-eJl" eventType="touchUpInside" id="nUg-NJ-4e2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nxt-al-Lq9" firstAttribute="leading" secondItem="Lf2-g4-QKb" secondAttribute="leading" constant="16" id="1JJ-Iw-G8D"/>
+                            <constraint firstItem="Lf2-g4-QKb" firstAttribute="trailing" secondItem="7kE-gM-wZe" secondAttribute="trailing" constant="16" id="2nS-xx-rn5"/>
+                            <constraint firstItem="nxt-al-Lq9" firstAttribute="leading" secondItem="Lf2-g4-QKb" secondAttribute="leading" constant="16" id="B7S-zf-XD1"/>
+                            <constraint firstItem="7kE-gM-wZe" firstAttribute="top" secondItem="Lf2-g4-QKb" secondAttribute="top" constant="16" id="CaH-we-zB3"/>
+                            <constraint firstItem="7kE-gM-wZe" firstAttribute="leading" secondItem="Lf2-g4-QKb" secondAttribute="leading" constant="16" id="K57-J4-hKa"/>
+                            <constraint firstItem="nxt-al-Lq9" firstAttribute="top" secondItem="7kE-gM-wZe" secondAttribute="bottom" constant="10" id="KTd-XG-fB0"/>
+                            <constraint firstItem="Lf2-g4-QKb" firstAttribute="trailing" secondItem="nxt-al-Lq9" secondAttribute="trailing" constant="16" id="WEZ-uq-Jol"/>
+                            <constraint firstItem="Lf2-g4-QKb" firstAttribute="trailing" secondItem="nxt-al-Lq9" secondAttribute="trailing" constant="16" id="adG-ru-8Ca"/>
+                            <constraint firstItem="Lf2-g4-QKb" firstAttribute="bottom" secondItem="nxt-al-Lq9" secondAttribute="bottom" id="utd-vw-e1r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lf2-g4-QKb"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneContainerView" destination="nxt-al-Lq9" id="bAF-Iw-F5L"/>
+                        <outlet property="phoneDetailsEditButton" destination="7kE-gM-wZe" id="xEE-pe-RQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFW-iV-Gge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="-206"/>
         </scene>
     </scenes>
 </document>

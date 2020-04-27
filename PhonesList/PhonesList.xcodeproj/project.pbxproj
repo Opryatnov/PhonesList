@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,19 @@
 		220461362456BE0500B7552B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220461342456BE0500B7552B /* Main.storyboard */; };
 		220461382456BE0900B7552B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220461372456BE0900B7552B /* Assets.xcassets */; };
 		2204613B2456BE0900B7552B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220461392456BE0900B7552B /* LaunchScreen.storyboard */; };
+		2204614A2456C1D500B7552B /* PhonesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220461492456C1D500B7552B /* PhonesTableViewCell.swift */; };
+		2204614C2456C21600B7552B /* PhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204614B2456C21600B7552B /* PhoneModel.swift */; };
+		224633612457170100B9A08F /* PhoneDetailsEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224633602457170100B9A08F /* PhoneDetailsEditView.swift */; };
+		224633632457170F00B9A08F /* PhoneDetailsEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224633622457170F00B9A08F /* PhoneDetailsEditView.xib */; };
+		225B4C2F2456CDF700616550 /* PhoneDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4C2E2456CDF700616550 /* PhoneDetailsViewController.swift */; };
+		225B4C322456CF8300616550 /* PhoneInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225B4C312456CF8300616550 /* PhoneInfoView.xib */; };
+		225B4C342456CF8E00616550 /* PhoneInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B4C332456CF8E00616550 /* PhoneInfoView.swift */; };
+		3A7026635A1E533D38A05998 /* Pods_PhonesList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E08EEBDC1C308B260887CC2 /* Pods_PhonesList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043A0CE20C3D174CE2922920 /* Pods-PhonesList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhonesList.release.xcconfig"; path = "Target Support Files/Pods-PhonesList/Pods-PhonesList.release.xcconfig"; sourceTree = "<group>"; };
+		1E08EEBDC1C308B260887CC2 /* Pods_PhonesList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhonesList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2204612B2456BE0500B7552B /* Phones List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phones List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2204612E2456BE0500B7552B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		220461302456BE0500B7552B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +34,14 @@
 		220461372456BE0900B7552B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2204613A2456BE0900B7552B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2204613C2456BE0900B7552B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		220461492456C1D500B7552B /* PhonesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableViewCell.swift; sourceTree = "<group>"; };
+		2204614B2456C21600B7552B /* PhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneModel.swift; sourceTree = "<group>"; };
+		224633602457170100B9A08F /* PhoneDetailsEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDetailsEditView.swift; sourceTree = "<group>"; };
+		224633622457170F00B9A08F /* PhoneDetailsEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneDetailsEditView.xib; sourceTree = "<group>"; };
+		225B4C2E2456CDF700616550 /* PhoneDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDetailsViewController.swift; sourceTree = "<group>"; };
+		225B4C312456CF8300616550 /* PhoneInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneInfoView.xib; sourceTree = "<group>"; };
+		225B4C332456CF8E00616550 /* PhoneInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInfoView.swift; sourceTree = "<group>"; };
+		8737073D54B30182BACC6021 /* Pods-PhonesList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhonesList.debug.xcconfig"; path = "Target Support Files/Pods-PhonesList/Pods-PhonesList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7026635A1E533D38A05998 /* Pods_PhonesList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00159AC81DA8F8D914E1D4C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E08EEBDC1C308B260887CC2 /* Pods_PhonesList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		220461222456BE0500B7552B = {
 			isa = PBXGroup;
 			children = (
 				2204612D2456BE0500B7552B /* PhonesList */,
 				2204612C2456BE0500B7552B /* Products */,
+				86992A54451DF0E7BF61845C /* Pods */,
+				00159AC81DA8F8D914E1D4C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +116,7 @@
 		220461442456BE6800B7552B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2204614B2456C21600B7552B /* PhoneModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,7 +124,8 @@
 		220461452456BE7000B7552B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				220461322456BE0500B7552B /* ViewController.swift */,
+				225B4C2D2456CDC100616550 /* PhoneDetails */,
+				220461472456C16F00B7552B /* PhonesList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +138,52 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		220461472456C16F00B7552B /* PhonesList */ = {
+			isa = PBXGroup;
+			children = (
+				220461482456C1B800B7552B /* Cell */,
+				220461322456BE0500B7552B /* ViewController.swift */,
+			);
+			path = PhonesList;
+			sourceTree = "<group>";
+		};
+		220461482456C1B800B7552B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				220461492456C1D500B7552B /* PhonesTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		225B4C2D2456CDC100616550 /* PhoneDetails */ = {
+			isa = PBXGroup;
+			children = (
+				225B4C302456CF2300616550 /* View */,
+				225B4C2E2456CDF700616550 /* PhoneDetailsViewController.swift */,
+			);
+			path = PhoneDetails;
+			sourceTree = "<group>";
+		};
+		225B4C302456CF2300616550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				225B4C312456CF8300616550 /* PhoneInfoView.xib */,
+				225B4C332456CF8E00616550 /* PhoneInfoView.swift */,
+				224633602457170100B9A08F /* PhoneDetailsEditView.swift */,
+				224633622457170F00B9A08F /* PhoneDetailsEditView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86992A54451DF0E7BF61845C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8737073D54B30182BACC6021 /* Pods-PhonesList.debug.xcconfig */,
+				043A0CE20C3D174CE2922920 /* Pods-PhonesList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2204613F2456BE0900B7552B /* Build configuration list for PBXNativeTarget "PhonesList" */;
 			buildPhases = (
+				E90D29D36376DC2290B0955D /* [CP] Check Pods Manifest.lock */,
 				220461272456BE0500B7552B /* Sources */,
 				220461282456BE0500B7552B /* Frameworks */,
 				220461292456BE0500B7552B /* Resources */,
+				82B3695824C918740DC91864 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +244,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224633632457170F00B9A08F /* PhoneDetailsEditView.xib in Resources */,
+				225B4C322456CF8300616550 /* PhoneInfoView.xib in Resources */,
 				2204613B2456BE0900B7552B /* LaunchScreen.storyboard in Resources */,
 				220461382456BE0900B7552B /* Assets.xcassets in Resources */,
 				220461362456BE0500B7552B /* Main.storyboard in Resources */,
@@ -173,13 +254,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		82B3695824C918740DC91864 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhonesList/Pods-PhonesList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhonesList/Pods-PhonesList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhonesList/Pods-PhonesList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E90D29D36376DC2290B0955D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhonesList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		220461272456BE0500B7552B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2204614A2456C1D500B7552B /* PhonesTableViewCell.swift in Sources */,
+				225B4C342456CF8E00616550 /* PhoneInfoView.swift in Sources */,
 				220461332456BE0500B7552B /* ViewController.swift in Sources */,
+				2204614C2456C21600B7552B /* PhoneModel.swift in Sources */,
 				2204612F2456BE0500B7552B /* AppDelegate.swift in Sources */,
+				225B4C2F2456CDF700616550 /* PhoneDetailsViewController.swift in Sources */,
+				224633612457170100B9A08F /* PhoneDetailsEditView.swift in Sources */,
 				220461312456BE0500B7552B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +450,7 @@
 		};
 		220461402456BE0900B7552B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8737073D54B30182BACC6021 /* Pods-PhonesList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +469,7 @@
 		};
 		220461412456BE0900B7552B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043A0CE20C3D174CE2922920 /* Pods-PhonesList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
