@@ -56,10 +56,10 @@
 		2204612D2456BE0500B7552B /* PhonesList */ = {
 			isa = PBXGroup;
 			children = (
-				220461432456BE4E00B7552B /* Constants */,
-				220461422456BE4300B7552B /* MVC */,
 				2204612E2456BE0500B7552B /* AppDelegate.swift */,
 				220461302456BE0500B7552B /* SceneDelegate.swift */,
+				220461432456BE4E00B7552B /* Constants */,
+				220461422456BE4300B7552B /* MVC */,
 				220461372456BE0900B7552B /* Assets.xcassets */,
 				220461392456BE0900B7552B /* LaunchScreen.storyboard */,
 				2204613C2456BE0900B7552B /* Info.plist */,
