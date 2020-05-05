@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 protocol PhoneDetailsViewControllerDelegate: class {
-    func saveButtonClicked(phoneModel: PhoneModel)
+    func saveButtonClicked(phoneModel: PhoneModel, index: Int)
 }
 
 enum DetailsState {
@@ -31,8 +31,11 @@ class PhoneDetailsViewController: UIViewController {
     
     private var phoneView: PhoneInfoView?
     var phoneModel: PhoneModel?
+    var index: Int = 0
+    private var addPhoneView: PhoneDetailsEditView?
     
     @IBOutlet weak var phoneContainerView: UIView!
+    @IBOutlet weak var addPhoneContainerView: UIView!
     @IBOutlet weak var phoneDetailsEditButton: UIButton!
     
     var state: DetailsState = .save
@@ -41,7 +44,6 @@ class PhoneDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureButtonState(state)
     }
     
@@ -58,10 +60,25 @@ class PhoneDetailsViewController: UIViewController {
         if state == .edit {
             state = .save
             configureButtonState(state)
-            delegate?.saveButtonClicked(phoneModel: phoneModel!)
+            if let addPhoneView = addPhoneView {
+                let phone: PhoneModel = PhoneModel(phoneName: addPhoneView.phoneName.text,
+                                                   phoneModel: addPhoneView.phoneModel.text,
+                                                   marketEntryDate: addPhoneView.marketEntryDate.text,
+                                                   manufacturer: addPhoneView.manufacturer.text,
+                                                   osVersion: addPhoneView.osVersion.text,
+                                                   phonePhoto: nil)
+                
+                delegate?.saveButtonClicked(phoneModel: phone, index: index)
+            }
+            configureContainerView()
+            addPhoneView?.removeFromSuperview()
+            
         } else {
             state = .edit
             configureButtonState(state)
+            configureAddPhoneContainerView()
+            phoneView?.removeFromSuperview()
+            
         }
     }
     
@@ -73,6 +90,20 @@ class PhoneDetailsViewController: UIViewController {
                 make.left.equalTo(0)
                 make.right.equalTo(0)
                 make.top.equalTo(0)
+                make.bottom.equalTo(0)
+            }
+        }
+    }
+    
+    private func configureAddPhoneContainerView() {
+        if let phoneModel = phoneModel {
+            addPhoneView = PhoneDetailsEditView.configureView(model: phoneModel)
+            phoneContainerView.addSubview(addPhoneView!)
+            addPhoneView!.snp.makeConstraints { (make) in
+                make.left.equalTo(0)
+                make.right.equalTo(0)
+                make.top.equalTo(0)
+                make.bottom.equalTo(0)
             }
         }
     }

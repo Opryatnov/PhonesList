@@ -115,7 +115,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-al-Lq9">
-                                <rect key="frame" x="16" y="118" width="382" height="744"/>
+                                <rect key="frame" x="16" y="118" width="382" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="100" constant="100" id="ZDa-ue-ywU"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kE-gM-wZe">
                                 <rect key="frame" x="16" y="60" width="382" height="48"/>
@@ -136,6 +139,13 @@
                                     <action selector="editPhoneDetails:" destination="Y6g-xt-eJl" eventType="touchUpInside" id="nUg-NJ-4e2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0h7-6x-3XI">
+                                <rect key="frame" x="0.0" y="734" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="100" constant="128" id="5r2-K3-HNB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="nxt-al-Lq9" firstAttribute="leading" secondItem="Lf2-g4-QKb" secondAttribute="leading" constant="16" id="1JJ-Iw-G8D"/>
@@ -144,13 +154,16 @@
                             <constraint firstItem="7kE-gM-wZe" firstAttribute="top" secondItem="Lf2-g4-QKb" secondAttribute="top" constant="16" id="CaH-we-zB3"/>
                             <constraint firstItem="7kE-gM-wZe" firstAttribute="leading" secondItem="Lf2-g4-QKb" secondAttribute="leading" constant="16" id="K57-J4-hKa"/>
                             <constraint firstItem="nxt-al-Lq9" firstAttribute="top" secondItem="7kE-gM-wZe" secondAttribute="bottom" constant="10" id="KTd-XG-fB0"/>
+                            <constraint firstItem="Lf2-g4-QKb" firstAttribute="bottom" secondItem="0h7-6x-3XI" secondAttribute="bottom" id="MCp-f0-6Tg"/>
                             <constraint firstItem="Lf2-g4-QKb" firstAttribute="trailing" secondItem="nxt-al-Lq9" secondAttribute="trailing" constant="16" id="WEZ-uq-Jol"/>
                             <constraint firstItem="Lf2-g4-QKb" firstAttribute="trailing" secondItem="nxt-al-Lq9" secondAttribute="trailing" constant="16" id="adG-ru-8Ca"/>
-                            <constraint firstItem="Lf2-g4-QKb" firstAttribute="bottom" secondItem="nxt-al-Lq9" secondAttribute="bottom" id="utd-vw-e1r"/>
+                            <constraint firstItem="Lf2-g4-QKb" firstAttribute="trailing" secondItem="0h7-6x-3XI" secondAttribute="trailing" id="neA-1y-L63"/>
+                            <constraint firstItem="0h7-6x-3XI" firstAttribute="leading" secondItem="Lf2-g4-QKb" secondAttribute="leading" id="yKB-kl-xtt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lf2-g4-QKb"/>
                     </view>
                     <connections>
+                        <outlet property="addPhoneContainerView" destination="0h7-6x-3XI" id="1eZ-pn-KgF"/>
                         <outlet property="phoneContainerView" destination="nxt-al-Lq9" id="bAF-Iw-F5L"/>
                         <outlet property="phoneDetailsEditButton" destination="7kE-gM-wZe" id="xEE-pe-RQa"/>
                     </connections>

@@ -124,6 +124,7 @@
 		220461452456BE7000B7552B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				224571D0245819B800EE1225 /* AddPhone */,
 				225B4C2D2456CDC100616550 /* PhoneDetails */,
 				220461472456C16F00B7552B /* PhonesList */,
 			);
@@ -153,6 +154,13 @@
 				220461492456C1D500B7552B /* PhonesTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		224571D0245819B800EE1225 /* AddPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddPhone;
 			sourceTree = "<group>";
 		};
 		225B4C2D2456CDC100616550 /* PhoneDetails */ = {

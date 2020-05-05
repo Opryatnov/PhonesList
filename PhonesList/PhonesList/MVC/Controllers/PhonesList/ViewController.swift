@@ -20,10 +20,11 @@ class ViewController: UIViewController {
         phoneList.append(phone)
     }
 
-    private func showPhoneInfo(model: PhoneModel?) {
+    private func showPhoneInfo(model: PhoneModel?, index: Int) {
         guard let model = model else { return }
         let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: PhoneDetailsViewController.self)) as? PhoneDetailsViewController
         viewController?.phoneModel = model
+        viewController?.index = index
         viewController?.delegate = self
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
@@ -43,14 +44,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-            showPhoneInfo(model: phoneList[indexPath.row])
-        phoneList.remove(at: indexPath.row)
+        showPhoneInfo(model: phoneList[indexPath.row], index: indexPath.row)
+        
         print("index = \(indexPath.row)")
     }
 }
 
 extension ViewController: PhoneDetailsViewControllerDelegate {
-    func saveButtonClicked(phoneModel: PhoneModel) {
+    func saveButtonClicked(phoneModel: PhoneModel, index: Int) {
+        phoneList.remove(at: index)
         phoneList.append(phoneModel)
         tableView.reloadData()
         print("save button pressed")
